@@ -14,15 +14,14 @@
 }
 *{margin:0;padding:0;box-sizing:border-box;}
 html{scroll-behavior:smooth;}
-body{background:var(--cream);color:var(--black);font-family:'Barlow Condensed',sans-serif;overflow-x:hidden;cursor:none;}
+body{background:var(--cream);color:var(--black);font-family:'Barlow Condensed',sans-serif;overflow-x:hidden;cursor:auto;}
 body::after{content:'';position:fixed;inset:0;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='g'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.72' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23g)' opacity='1'/%3E%3C/svg%3E");pointer-events:none;z-index:9997;opacity:0.04;}
 .page{display:none;min-height:100vh;}.page.active{display:block;}
 
-/* ── CURSOR ── */
-.cursor{position:fixed;pointer-events:none;z-index:99999;mix-blend-mode:difference;}
-.c-dot{width:7px;height:7px;background:white;border-radius:50%;position:absolute;transform:translate(-50%,-50%);}
-.c-ring{width:34px;height:34px;border:1.5px solid white;border-radius:50%;position:absolute;transform:translate(-50%,-50%);transition:width .2s,height .2s,opacity .2s;}
-.c-ring.big{width:52px;height:52px;opacity:.5;}
+.cursor, .c-ring, .c-dot{display:none !important;}
+button, a, input, textarea, select, .folder, .circle-btn{cursor:auto;}
+
+
 
 /* ── SCROLL PROGRESS ── */
 #spb{position:fixed;top:0;left:0;height:2px;background:var(--red);z-index:9998;width:0;transition:width .05s linear;}
@@ -543,7 +542,7 @@ footer{background:var(--black);border-top:1px solid rgba(255,255,255,.04);paddin
       <div style="display:flex;flex-direction:column;gap:10px;" data-a="up">
         <div class="post-it" style="background:var(--postit);max-width:152px;transform:rotate(-2.5deg);padding:10px 14px;font-size:.72rem;position:relative;">
           <img src="pin.png" class="pin" style="animation-delay:.9s;" alt="">
-          ★ Open for student work now, full-time from Oct '26
+          ★ Open for work ★
         </div>
         <button class="circle-btn" onclick="goTo('contact-section')">↗</button>
       </div>
@@ -750,9 +749,9 @@ footer{background:var(--black);border-top:1px solid rgba(255,255,255,.04);paddin
       <div style="position:relative;margin-bottom:32px;">
         <img src="camera.png" style="width:480px;float:right;margin-left:20px;margin-bottom:10px;animation:float-y 5s ease-in-out infinite;--fr:-4deg;" alt="" data-a="right">
         <div class="about-txt" data-a="left">
-          <p>I am a final-year Motion Graphics student at AP Hogeschool Antwerpen, with a focus on motion design and visual storytelling. My work mainly explores animation, graphic design, and 3D visuals, combining clean composition with experimentation in form and movement.During my studies, I completed an internship at DB Video, where I gained hands-on experience in a professional production environment and further developed my skills in <strong>video editing, motion design, and post-production workflows.</strong></p>
+          <p>I am a Graphic and digital media graduate from AP Hogeschool Antwerpen, with a strong focus on motion design and visual storytelling. My work mainly explores animation, graphic design, and 3D visuals, combining clean composition with experimentation in form and movement.During my studies, I completed an internship at DB Video, where I gained hands-on experience in a professional production environment and further developed my skills in <strong>video editing, motion design, and post-production workflows.</strong></p>
           <p style="margin-top:12px;"> In addition to my internship, I have worked on a range of school projects and personal experiments, building experience in Adobe After Effects, Premiere Pro, Illustrator, and Photoshop, as well as basic programming and web-related projects. I enjoy working across different visual disciplines, from animated content to graphic layouts and 3D-based visuals, and <strong>I’m always looking to improve both the technical and creative sides of my work.</strong></p>
-          <p style="margin-top:12px;">I am currently looking for a student job until the end of September.<strong> From October onwards, I will be available for a full-time position in motion design or related creative roles.</strong></p>
+          <p style="margin-top:12px;"><strong> I am currently looking for a full-time position in motion design, video production, or related creative roles.</strong></p>
         </div>
         <div style="clear:both;"></div>
       </div>
@@ -761,23 +760,23 @@ footer{background:var(--black);border-top:1px solid rgba(255,255,255,.04);paddin
       <div class="log" data-stagger>
         <div class="log-row"><span class="lk">Name</span><span class="lv">Ashanti Schoepen</span></div>
         <div class="log-row"><span class="lk">Location</span><span class="lv">Hamme, BE</span></div>
-        <div class="log-row"><span class="lk">Status</span><span class="lv" style="color:var(--red);">Final Year</span></div>
-        <div class="log-row"><span class="lk">Open to</span><span class="lv">Student job & full time</span></div>
+        <div class="log-row"><span class="lk">Status</span><span class="lv" style="color:var(--red);">Graduated</span></div>
+        <div class="log-row"><span class="lk">Open to</span><span class="lv">full time</span></div>
         <div class="log-row"><span class="lk">Focus</span><span class="lv">Motion + Poster</span></div>
         <div class="log-row"><span class="lk">Languages</span><span class="lv">Dutch, English</span></div>
       </div>
       <div data-stagger style="display:flex;flex-direction:column;gap:14px;">
         <div class="post-it" style="background:var(--postit);transform:rotate(-2.5deg);padding:14px 16px;font-size:.95rem;max-width:175px;position:relative;">
           <img src="pin.png" class="pin" style="animation-delay:.4s;" alt="">
-          <span class="pi-lbl">// Location</span>Hamme, Belgium
+          <span class="pi-lbl">Location</span>Hamme, Belgium
         </div>
         <div class="post-it" style="background:var(--postit2);transform:rotate(1.5deg);padding:14px 16px;font-size:.95rem;max-width:175px;position:relative;">
           <img src="pin.png" class="pin" style="animation-delay:.6s;" alt="">
-          <span class="pi-lbl">// Status</span>Final year · seeking jobs
+          <span class="pi-lbl">Status</span>Graduated · seeking jobs
         </div>
         <div class="post-it" style="background:var(--kraft);transform:rotate(-1deg);padding:14px 16px;font-size:.95rem;max-width:175px;position:relative;">
           <img src="pin.png" class="pin" style="animation-delay:.8s;" alt="">
-          <span class="pi-lbl">// Vibe</span>A hands-on motion designer mixing clean design with experimental visuals.
+          <span class="pi-lbl">Vibe</span>A hands-on motion designer mixing clean design with experimental visuals.
         </div>
       </div>
       <img src="stamp.png" style="width:68px;align-self:flex-end;animation:stamp-idle 7s ease-in-out infinite;transform:rotate(-10deg);" alt="" data-a="rotate-r">
@@ -831,7 +830,7 @@ footer{background:var(--black);border-top:1px solid rgba(255,255,255,.04);paddin
       <div class="post-it" style="background:var(--postit);max-width:245px;transform:rotate(-1.5deg);padding:15px 18px;font-size:.92rem;position:relative;">
         <img src="pin.png" class="pin" style="animation-delay:.3s;" alt="">
         <span class="pi-lbl">( reach out )</span>
-        Available for student job,<br>full time, and anything<br>with a pulse.
+        Available for work<br>full time, and anything<br>with a pulse.
         <img src="stamp.png" style="position:absolute;bottom:-22px;right:-18px;width:50px;" alt="">
       </div>
       <div class="social-links">
